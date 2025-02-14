@@ -9,7 +9,7 @@
     <meta property="og:title" content="Happy Valentine's Day ❤️">
     <meta property="og:description" content="Will you be my Valentine? A special surprise awaits!">
     <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Happy+Valentines+Day">
-    <meta property="og:url" content="https://valentines-day-jol3.onrender.com">
+    <meta property="og:url" content="YOUR_DEPLOYED_URL_HERE">
     <meta name="twitter:card" content="summary_large_image">
     <title>Happy Valentine's Day ❤️</title>
     <style>
@@ -163,8 +163,7 @@
     </div>
     <!-- Confetti Canvas -->
     <canvas id="confetti"></canvas>
-    <!-- YouTube Player -->
-    <div id="player" style="display: none;"></div>
+
     <script>
         // JavaScript for interactivity
         const yesBtn = document.getElementById('yesBtn');
@@ -191,27 +190,6 @@
             message.textContent = "Are you sure? 😢";
             message.classList.add('show');
         });
-
-        // YouTube Player Setup
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '0',
-                width: '0',
-                videoId: 'PXpnHAVbHFU',
-                events: { 'onReady': onPlayerReady }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.playVideo();
-            event.target.setVolume(70);
-        }
 
         // Confetti Explosion
         const canvas = document.getElementById('confetti');
